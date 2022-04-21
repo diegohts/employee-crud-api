@@ -19,6 +19,9 @@
  // Rota responsavel por listar todos o 'Colaborador' pelo seu id: (GET): localhost:3000/api/employees/{id}
  router.get('/employees/:id', employeeController.findEmployeeById); 
 
+  // Rota responsavel por atualizar as informacoes do 'Colaborador' especifico por id: (PUT): localhost:3000/api/employees/{id}
+  router.put('/employees/:id', employeeController.updateEmployeeById); 
+
 module.exports = router;
 
 
