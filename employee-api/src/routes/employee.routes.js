@@ -13,8 +13,11 @@
  // Rota responsável por criar um novo 'Colaborador(a)': (POST): localhost:3000/api/employees
  router.post('/employees', employeeController.createEmployee);
 
- // Rota responsavel por listar todos os colaboradores: (GET): localhost:3000/api/employees
+ // Rota responsavel por listar todos os 'Colaboradores': (GET): localhost:3000/api/employees
  router.get('/employees', employeeController.listAllEmployees); 
+
+ // Rota responsavel por listar todos o 'Colaborador' pelo seu id: (GET): localhost:3000/api/employees/{id}
+ router.get('/employees/:id', employeeController.findEmployeeById); 
 
 module.exports = router;
 
