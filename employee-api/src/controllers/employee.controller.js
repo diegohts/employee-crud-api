@@ -59,3 +59,15 @@ exports.updateEmployeeById = async(req, res) => {
     message: 'Employee Update Successfully!'
   });
 };
+
+// Metodo responsavel por excluir o colaborador especifico por id
+exports.deleteEmployeeById = async(req, res) => {
+  const employeeId = req.params.id;
+  const response = await db.query(
+    "DELETE FROM employee WHERE employee_id = $1",
+    [employeeId]
+  );
+  res.status(200).send({
+    message: 'Employee Delete Successfully!'
+  });
+};

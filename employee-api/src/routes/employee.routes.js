@@ -22,6 +22,9 @@
   // Rota responsavel por atualizar as informacoes do 'Colaborador' especifico por id: (PUT): localhost:3000/api/employees/{id}
   router.put('/employees/:id', employeeController.updateEmployeeById); 
 
+  // Rota responsavel por deletar um 'Colaborador' especifico por id: (PUT): localhost:3000/api/employees/{id}
+  router.delete('/employees/:id', employeeController.deleteEmployeeById); 
+
 module.exports = router;
 
 
